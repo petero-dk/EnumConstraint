@@ -10,6 +10,7 @@
     <Description>A set of IRouteConstraint that functions on EnumValues and the name value of the DisplayAttribute on EnumValues for really nice urls.</Description>
     <PackageTags>asp.net,core,mvc,enum,constraint,irouteconstraint</PackageTags>
     <PackageReleaseNotes>Currently implemented IRouteConstraint for name value of DisplayAttribute</PackageReleaseNotes>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
