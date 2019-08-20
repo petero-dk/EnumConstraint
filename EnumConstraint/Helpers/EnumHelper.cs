@@ -16,8 +16,9 @@ namespace EnumConstraint.Helpers
         static EnumHelper()
         {
             enumTryParse = typeof(Enum).GetMethods(BindingFlags.Public | BindingFlags.Static)
-                .Where(m => m.Name == "TryParse" && m.GetParameters().Length == 3)
+                .Where(m => m.Name == "TryParse" && m.GetParameters().Length == 3 && m.IsGenericMethod)
                 .First();
+            
         }
 
         public static bool TryParse(
