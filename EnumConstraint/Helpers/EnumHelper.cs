@@ -43,6 +43,11 @@ namespace EnumConstraint.Helpers
             return enumType.GetFields(BindingFlags.Static | BindingFlags.Public);
         }
 
+        public static IEnumerable<string> GetStringValues(Type enumType)
+        {
+            return Enum.GetValues(enumType).OfType<Enum>().Select(i => i.ToString());
+        }
+
         public static IEnumerable<string> GetDisplayValues(Type enumType)
         {
             try
